@@ -1,0 +1,73 @@
+<table>
+    <tr>
+        <!--Invoice title-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Invoice_Title","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+
+        <!--Invoice content-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Invoice_Content","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+        
+    </tr>
+    <tr>
+        <!--Finansiering_Title-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Finansiering_Title","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+
+        <!--Finansiering content-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Finansiering_Content","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+        
+    </tr>
+    <tr>
+        <!--Boligmappa_Title-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Boligmappa_Title","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+
+        <!--Boligmappa_Content-->
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Boligmappa_Content","Global_Settings", "Name", "Text")>>"</td>
+        </tr>
+        
+    </tr>
+    <tr>
+        <!--Confirmation_Price_Hour (one of three?)-->
+        <tr>
+            <td>Price hour:</td>
+        </tr>
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Price_Hour1","Global_Settings", "Name", "Value")>>"</td>
+        </tr>     
+    </tr>
+
+    <tr>
+        <!--Confirmation_Price_Tilsynsseddel-->
+        <tr>
+            <td>Example: Confirmation Price Tilsynsseddel:</td>
+        </tr>
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Price_Tilsynsseddel", "Global_Settings", "Name", "Value")>>"</td>
+        </tr>
+    </tr>
+
+    <tr>
+        <!--Confirmation_Price_Melding-->
+        <tr>
+            <td>Example: Confirmation Price Melding:</td>
+        </tr>
+        <tr>
+            <td>"<<LOOKUP("Order_Confirmation_Price_Melding","Global_Settings", "Name", "Value")>>"</td>
+        </tr>
+        <!--Picture-->
+        <tr>
+            <td>
+                "<<Start: select(Order_Confirmation_Images[UID], [_THISROW].[UID]=[Order_Confirmation_Ref])>><<End>>" 
+            </td>
+        </tr>
+    </tr>
+</table>
